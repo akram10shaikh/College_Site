@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+
+
+    <title>Application Form</title>
+</head>
+<body style="background-color:rgb(0,58,99);">
+{% include 'header.html' %}
+
+
+<div class="container bg-white">
+    <h2 class="text-center" style="padding-bottom:30px;">Student Details</h2>
+<!--Personal Details-->
+    {% include 'user.html' %}
+
+        {% if error %}
+        <p class="alert alert-danger">
+            {{ error }}
+        </p>
+        {% endif %}
+
+        <h4>Personal Details</h4>
+
+          <hr>
+             <form action="{% url 'details' %}" method="POST" class="text-center" style="color:black;font-size:20px;" enctype="multipart/form-data">
+        {% csrf_token %}
+                 <table style="text-align:left;">
+            <tr>
+               <td>
+                   <label class="form-label" style="margin-left:100px;">First Name</label>
+               </td>
+                <td>
+                    <input type="text" name="fname">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Second Name</label>
+                </td>
+                <td>
+                    <input type="text" name="sname">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Last Name</label>
+                </td>
+                <td>
+                     <input type="text" name="lname">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Gender</label>
+                </td>
+                <td>
+<!--                    <input type="text" name="gender">-->
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label class="form-label" style="margin-left:100px;">Phone No</label>
+                </td>
+                <td>
+                    <input type="number" name="phone"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label class="form-label" style="margin-left:100px;">Date of Birth</label>
+                </td>
+                <td>
+                    <input type="date" name="dob"><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Community</label>
+                </td>
+                <td>
+                     <input type="text" name="community">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Nationality</label>
+                </td>
+                <td>
+                    <input type="text" name="nationality">
+                </td>
+            </tr>
+
+
+        </table>
+                 <br>
+<!--                 Address Information -->
+    <table style="text-align:left;">
+         <h4 style="text-align:left;">Address Details</h4>
+          <hr>
+         <tr>
+                <td>
+                   <label class="form-label" style="margin-left:100px;">Address</label>
+                </td>
+                <td>
+                    <input type="text" name="address" style="margin-left:50px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">City</label>
+                </td>
+                <td>
+                    <input type="text" name="city" style="margin-left:50px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">District</label>
+                </td>
+                <td>
+                    <input type="text" name="district" style="margin-left:50px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">State</label>
+                </td>
+                <td>
+                    <input type="text" name="state" style="margin-left:50px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Pincode</label>
+                </td>
+                <td>
+                    <input type="number" name="pincode" style="margin-left:50px;">
+                </td>
+            </tr>
+    </table>
+<br>
+<!--Education details-->
+                 <table style="text-align:left;">
+         <h4 style="text-align:left;">Education Details</h4>
+          <hr>
+         <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">10th Roll No</label>
+                </td>
+                <td>
+                    <input type="text" name="10rollno" style="margin-left:10px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Year</label>
+                </td>
+                <td>
+                    <input type="number" name="10year" style="margin-left:10px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Board</label>
+                </td>
+                <td>
+                    <input type="text" name="10board" style="margin-left:10px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">12th Roll No</label>
+                </td>
+                <td>
+                    <input type="text" name="12rollno" style="margin-left:10px;">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Year</label>
+                </td>
+                <td>
+                    <input type="number" name="12year" style="margin-left:10px;">
+                </td>
+            </tr>
+                      <tr>
+                <td>
+                     <label class="form-label" style="margin-left:100px;">Board</label>
+                </td>
+                <td>
+                    <input type="text" name="12board" style="margin-left:10px;">
+                </td>
+            </tr>
+    </table>
+                 <br>
+<!--                Photo and sign upload-->
+                 <table style="text-align:left;">
+                     <div>
+                      <h4 style="text-align:left;">Photo and Signature Upload</h4>
+          <hr>
+                     <tr>
+                         <td>
+
+                  <label class="form-label" style="margin-left:80px;">Passport Photo</label>
+                         </td>
+                         <td>
+                  <input class="form-control form-control-lg" name="photo" type="file" style="margin-left:10px;">
+
+                         </td>
+                     </tr>
+                     <tr>
+                         <td>
+
+                  <label class="form-label" style="margin-left:80px;">Signature</label>
+                         </td>
+                         <td>
+                  <input class="form-control form-control-lg" name="sign" type="file" style="margin-left:10px;">
+
+                         </td>
+                     </tr>
+                    </div>
+                 </table>
+
+<!--                 Declaration-->
+<br>
+   <table style="text-align:left;">
+                     <div>
+                      <h4 style="text-align:left;">Declaration</h4>
+          <hr>
+            <p style="text-align:left;"><div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" required>
+  <label class="form-check-label">
+
+  </label>
+</div>
+I hereby declare that all the statements made in this application are True, Complete and Correct to the best of my
+knowledge and belief. I understand that in the event of any information being found untrue or incorrect at any stage or
+I am not satisfying any of the eligibility criteria stipulated, and also in case of creating influence/undue pressure
+regarding recruitment shall tantamount to cancellation of my candidature.
+I will follow all the Guidelines regarding Social Distancing Mode of Exam given in advertisement and subsequently. Any violation
+may result in cancellation of my candidature.
+            </p>
+                         <button type="submit" class="btn btn-primary">Register</button>
+                        <br>
+                         <br>
+                     </div>
+
+                 </table>
+
+             </form>
+        </div>
+    </div>
+
+</div>
+
+{% include 'footer.html' %}
+
+
+</body>
+</html>

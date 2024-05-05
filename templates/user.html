@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+</head>
+<body>
+{% block 'user' %}
+    <form action="{% url 'logout' %}" method="POST">
+        {% csrf_token %}
+    <h5 align="right">{{ user }} <input type="submit" value="Logout"></h5>
+        </form>
+    {% endblock %}`
+</body>
+</html>

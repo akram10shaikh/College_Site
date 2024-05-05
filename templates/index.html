@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>J-Tech Education</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</head>
+<body style="background-color:rgb(0,58,99);">
+
+{% include 'header.html' %}
+
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/mmimg1.jpg' %}" alt="Los Angeles" width="900px;" height="400px;" class="d-block" style="width:100%">
+      <div class="carousel-caption">
+        <h3 style="font-size:50px">J-Tech Education</h3>
+        <p style="font-size:25px">We prepare diverse, talented and ambitious students to learn, lead and embody excellence in truth and service</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/mimg2.jpg' %}" alt="Chicago" class="d-block" width="900px;" height="400px;" style="width:100%">
+      <div class="carousel-caption">
+     <h3 style="font-size:50px">J-Tech Education</h3>
+        <p style="font-size:25px">No matter how far you've come, you can always go further.</p>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/mimg3.jpg' %}" alt="New York" class="d-block" width="900px;" height="400px;" style="width:100%">
+      <div class="carousel-caption">
+        <h3 style="font-size:50px">J-Tech Education</h3>
+        <p style="font-size:25px">Join us in supporting the ambition of our wider communities, by bringing people together to shape, celebrate and make the world a better place.</p>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+
+<div class="container-fulid">
+
+  <div class="mt-4 p-5 text-blue rounded bg-white">
+    <div class="row">
+      <div class="col-sm-3">
+    <img src="{% static 'img/asad1.jpg' %}" alt="Asad" width="250px" height="300px">
+    </div>
+      <div class="col-sm-9">
+        <h1>J-Tech Appoints Revered Physicists and Academic Leader Asad Shaikh, PhD, as 18th President</h1>
+    <p style="font-size:30px;">Physicists of Indian diasporas spent career dedicated to elevating diversity in higher education </p>
+  </div>
+      </div>
+    </div>
+</div>
+<div class="container-fulid">
+
+  <div class="mt-4 p-5 text-blue rounded bg-white">
+    <div class="row">
+      <div class="col-sm-9">
+    <h1 style="text-align:right;"> Aqeeb Shaikh</h1>
+        <h4 style="text-align:right;"> Mechanical Engineer </h4>
+<!--    <p style="font-size:30px;">J-Tech is a very culturally rich and diverse University and our students not only come from all over the country, but all over the world. However, even through that diversity, there is an undeniable culture that grounds us and connects us, showing us that while we may all be different, that is where our strength lies.”</p>-->
+       <p style="font-size:30px;"> With the advancement of technology, this particular stream has become one of the ardent streams that the students go for after they complete their high school education. Also, the job scope for this particular field of engineering is also pretty high and that is the reason why students from different colleges and institutions want to pursue a degree in Mechanical Engineering.</p>
+      </div>
+      <div class="col-sm-3">
+    <img src="{% static 'img/aqeeb1.jpg' %}" alt="Aqeeb" width="250px" height="350px">
+
+  </div>
+      </div>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'img/adil.jpg' %}" class="card-img-top" alt="adil" width="20px" height="300px">
+      <div class="card-body">
+        <h5 class="card-title">Adil Shaikh</h5>
+        <p class="card-text">Electrical engineers / India</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'img/swapnil.jpg' %}" class="card-img-top" alt="Swapnil" width="20px" height="300px">
+      <div class="card-body">
+        <h5 class="card-title">Swapnil Jadav</h5>
+        <p class="card-text">ICICI Bank Manager</p>
+      </div>
+
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="{% static 'img/arfat.jpg' %}" class="card-img-top" alt="Arfat" width="20px" height="300px">
+      <div class="card-body">
+        <h5 class="card-title">Arfat Shaikh</h5>
+        <p class="card-text">Food and Drug Administration</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% include 'footer.html' %}
+</body>
+</html>

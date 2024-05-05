@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Hallticket</title>
+</head>
+<body>
+
+{% include 'header.html' %}
+
+
+<div class="container bg-white">
+    <h3 align="center"><img src="{% static 'img/jtechfinal.jpg' %}">J-Tech Education CET <br>Hall-Ticket</h3>
+    <p align="center">Phone:989097833 Email:jtechcompany1996@gmail.com</p>
+    {% include 'user.html' %}
+    {% for i in i %}
+    <table style="font-size:15px;" class="table table-hover">
+
+        <tr>
+
+            <td align="left" >
+                <b>Roll No : {{ roll }}</b><br>
+                <b>Name and Address</b><br>
+             {{ i.fname }} {{ i.sname }} {{ i.lname }}<br>
+             {{ i.address }}
+             {{ i.city }}<br>
+            {{ i.district }}
+             {{ i.state }}<br>
+            {{ i.pincode }}</td>
+            <td align="right"><b>Venu of Examination</b> <br>
+<!--                ION Digital Zone IDZ<br>-->
+<!--                Vishnupuri SSS Indira<br>-->
+<!--                Institute of Technology Vishnupurti Gate No 18 & 22<br>-->
+<!--                Nanded Maharashtra 431601<br>-->
+                    {{ exam }}
+            </td>
+        </tr>
+
+        <tr>
+
+            <td align="" style="padding-top:40px;">
+                <b >Date of Examination</b> 08/08/2025 <b>Time</b> 10:00 AM<br>
+                <b>Sir/madam</b><br>
+                Re : ONLINE COMMON ENTRANCE EXAMINATION <br> for students who want to take admission.
+
+            </td>
+            <td align="right"> <img src="{% static 'img/hallticketdemo.jpg' %}"  width="150" height="180" style="padding-right:10px;">
+             <img src="{{ i.photo.url }}"  width="150" ></td>
+        </tr>
+        </table>
+        <p>
+            With reference to your Application for the above adimission in response to the advertisement published in the newspapers, and posted on the authorised J-Teck website www.j-teck.in, please appear for the online examination at your own expenses on the date, time and venue mentioned above, subject to the terms and conditions set out below. Please bring this call letter with your photograph affixed thereon, Photo identity proof in original and a photocopy - THIS IS ESSENTIAL. Please hand over this call-letter alongwith photocopy of photo identity proof duly stapled together to the invigilator. Please write your Roll No. and Reg. No. on the Photocopy of the photo ID proof. You must report at the examination venue before the time of the examination as printed on this call-letter. Candidates arriving after the time printed on the call letter will not be permitted to enter the Examination Hall nor shall a candidate be permitted to leave the examination hall till the time for the test is over and/or permission to leave the hall is given by the test administrator.
+        </p>
+        <table style="font-size:15px;" class="table table-hover">
+        <tr>
+                <td> <img src="{% static 'img/halticketform.jpg' %}"  width="720" height="180">
+            </td>
+
+            <td align="center">
+                 <img src="{{ i.sign.url }}"  width="100"><br>
+                Head - Administration
+
+
+            </td>
+            </tr>
+        <br>
+        </table>
+    <p>Your photograph affixed on the call letter should match the one uploaded in the online application form failing which you will not be allowed to appear for the examination. Your signature should tally with the signature uploaded. In case of discrepancy, you will not be allowed to appear for the examination.</p>
+        <br><br>
+
+   {% endfor %}
+<br>
+    <br>
+    <p>
+        INSTRUCTIONS<br>
+1.	You must bring the call letter alongwith photo identity proof (such as PAN Card/Passport/Permanent Driving License/Voter’s Card/Bank Passbook with photograph/Photo Identity proof issued by a Gazetted Officer (on official letterhead)/Photo Identity proof issued by a People’s Representative (on official letterhead)/Identity Card issued by a recognised College/University/Aadhar/E-Aadhar Card with a photograph /Employee ID) in original as well as a photocopy. Please note that your name as appearing on the call letter (provided by you during the process of registration) should exactly match the name as appearing on the photo identity proof. If there is any mismatch between the name indicated in the Call Letter and Photo Identity Proof you will not be allowed to appear for the examination.
+Ration Card and Learner's Driving License will NOT be accepted as valid ID proof.<br>
+In case of candidates who have changed their name will be allowed only if they produce original Gazette notification/their original marriage certificate/affidavit in original.<br>
+2.	The call letter along with the photocopy of photo identity proof duly stapled together should be submitted to the invigilator in the examination hall failing which the candidate will not be permitted to appear for the test. Do not forget to write your Registration No. and Roll No. on the photo copy of Photo Identity proof. Candidates should put their Left Thumb Impression clearly and sign in the respective space provided on the call-letter in the presence of the invigilator.<br>
+3.	You should ascertain exact location of the venue well in advance of the date of examination.<br>
+4.	The candidates must reach the venue of examination by the time mentioned above. Please note that the candidate reporting 30 minutes after the reporting time will not be allowed in the examination hall nor shall a candidate be permitted to leave the examination hall till the time for the test is over and the test administrator has given permission to leave. The test will begin after completion of the formalities like checking of attendance, obtaining signature on the call letter and collection of call letters alongwith photo identity proof etc. IBPS will not be responsible for any delay or disruption in transport.<br>
+5.	A handout giving information about the type of tests you will be taking is available on authorised IBPS website. Please download the Information Handout and study it carefully. In addition a link for a mock test will be available on the authorised IBPS website.<br>
+6.	You should bring a ball point pen with you to the examination hall.<br>
+7.	Please note that you are allowed to appear only once for the examination for above mentioned post. Multiple appearances will result in cancellation of candidature. In case more than one call letter has been generated, you are advised to appear only once on the date and at the time mentioned on the respective call letter. All other call letters are to be surrendered.<br>
+8.	You should strictly comply with the directions given to you by the test administrator/invigilator. If any candidate is found disregarding these directions he/she will be liable to be debarred from the test.<br>
+9.	You are advised not to bring any of the banned items including mobile phones/pagers to the venue of examination as arrangement for safekeeping cannot be assured. Any candidate found resorting to any unfair means or malpractice or any misconduct while appearing at the examination including giving/receiving help to/from any candidate during the test will be disqualified. The candidate should be vigilant to ensure that no other candidate is able to copy from his/her answers. J-TECH would be analysing the responses (answers) of individual candidates with other candidates to detect patterns of similarity of right and wrong answers. If in the analytical procedure adopted by J-TECH in this regard, it is inferred/concluded that the responses have been shared and scores obtained are not genuine/valid, IBPS reserves right to cancel the candidature of the concerned candidates and the result of such candidates (disqualified) will be withheld.<br>
+
+
+    </p><br>
+    <table align="center">
+   <tr>
+        <tr>
+       <td >
+            <button onclick="printCurrentPage()" class="btn btn-primary" style="width:100px;">Print</button>
+       </td>
+        </tr>
+    </table>
+<br>
+</div>
+
+{% block scripts %}
+<script>
+    function printCurrentPage() {
+        window.print();
+    }
+</script>
+{% endblock %}
+
+
+{% include 'footer.html' %}
+
+</body>
+</html>
